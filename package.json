@@ -1,0 +1,38 @@
+{
+  "name": "openfinder",
+  "version": "0.1.0",
+  "description": "A local-first file manager for Chromium browsers with a Finder-style Liquid Glass interface.",
+  "license": "GPL-3.0-or-later",
+  "author": "Lucas Van De Weerd",
+  "type": "module",
+  "bin": {
+    "openfinder": "bin/openfinder.mjs"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "start": "node bin/openfinder.mjs",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "licenses": "node scripts/notices.mjs",
+    "licenses:write": "node scripts/notices.mjs --write"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@preact/signals": "2.11.3",
+    "lucide": "1.56.0",
+    "preact": "11.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.4"
+  }
+}

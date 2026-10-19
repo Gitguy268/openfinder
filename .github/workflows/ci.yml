@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # fails when a shipped dependency is not credited in THIRD_PARTY_NOTICES.md or has a license that is not accepted
+      - run: npm run licenses
+      - run: npm test
+      - run: npx playwright install --with-deps chromium
+      # builds the app (type check included) and runs the browser tests against the build
+      - run: npm run e2e

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="OpenFinder is a local-first file manager that runs in a Chromium browser." />
+    <title>OpenFinder</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./src/glass/tokens.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Replaced when the script runs. Shown when it cannot: JavaScript off, or opened from file://. -->
+      <main class="notice">
+        <h1>OpenFinder could not start</h1>
+        <p>
+          OpenFinder has to be loaded from a web address, not opened as a file. On a Mac, double-click
+          <code>start.command</code> in the OpenFinder folder. Elsewhere, run <code>npm start</code> and open
+          <code>http://localhost:4627</code> in Chrome, Edge, Brave, Opera or Arc with JavaScript on.
+        </p>
+      </main>
+    </div>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>
