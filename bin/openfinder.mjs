@@ -44,7 +44,7 @@ createServer((req, res) => {
   createReadStream(file).on('error', () => res.destroy()).pipe(res)
 }).listen(port, '127.0.0.1', () => {
   const url = `http://localhost:${port}`
-  console.log(`OpenFinder is running at ${url} (Ctrl+C to stop). Open it in a Chromium browser.`)
+  console.log(`OpenFinder is running at ${url} (Ctrl+C to stop). Open it in a Chromium browser to work with folders; other browsers get the Sandbox.`)
   if (args.includes('--open')) {
     const opener = { darwin: 'open', win32: 'explorer' }[process.platform] ?? 'xdg-open'
     spawn(opener, [url], { stdio: 'ignore', detached: true }).on('error', () => {}).unref()

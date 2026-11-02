@@ -1,9 +1,9 @@
 [
   {
-    "name": "@fontsource-variable/inter",
+    "name": "@fontsource-variable/bricolage-grotesque",
     "version": "5.3.0",
     "license": "OFL-1.1",
-    "url": "https://fontsource.org/fonts/inter"
+    "url": "https://fontsource.org/fonts/bricolage-grotesque"
   },
   {
     "name": "@preact/signals",

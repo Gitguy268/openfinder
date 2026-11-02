@@ -29,6 +29,17 @@ Newest at the bottom. Each entry says what was decided, by whom, and why.
 | Floating glass uses a 5 px blur and a displacement scale of 80 | Measured in Chromium: with an 18 px blur the edge bending changed no pixel at all. The sidebar keeps a heavy blur and no bending, as text sits on it. |
 | View modes other than Icons, sort, share, tags and search are visible in the toolbar but disabled | They belong to milestones 2, 3 and 6. Showing them now fixes the toolbar layout. |
 
+## 2026-10-21: Xiao's design and the Library
+
+| Decision | By | Why |
+|---|---|---|
+| OpenFinder takes Xiao's design: paper and ink surfaces, red only for focus and primary actions, Bricolage Grotesque and Junicode italic, no Liquid Glass, no fake window | Author | Asked for, so that OpenFinder can be Xiao's Library. It replaces the Finder and Liquid Glass direction of DESIGN-REFERENCE.md |
+| Xiao's `shared/tokens.css`, heading font and Library contract are copied in by scripts (`npm run tokens`, `npm run contract`), each copy carrying its source hash | Claude | One source for both projects. MPL-2.0 files may go into GPL code, not the reverse, so Xiao owns them |
+| The page talks to a *provider*: the browser's folder handles standalone, Xiao's bridge inside Xiao. Each says what it can do; the interface shows nothing else | Claude | Replaces the "is this Chromium" gate. A capability that is missing gets an explanation, not a disabled control or a fake success |
+| Standalone renames happen in place (Chromium's `move()`), without undo; Xiao renames through a journal with undo | Claude | A web page has no journal it can trust across a crash. Saying "no undo" is better than a half undo |
+| Folder previews of pages and SVGs are shown as text, never run; the Xiao build has `frame-src 'none'` | Claude | A file's content must never run with OpenFinder's (or Xiao's) privileges |
+| The glass slider, Tags placeholders, disabled view buttons and the decorative window lights are removed | Claude | No mock controls |
+
 ## Platform limits
 
 - Chromium does not grant the Home, Desktop, Documents or Downloads folder itself, only folders inside them. `~/Library` is fully blocked. Favorites therefore point at any granted folder or subfolder.

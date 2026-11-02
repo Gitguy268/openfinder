@@ -3,7 +3,12 @@
     "target": "ES2023",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "lib": ["ES2023", "DOM", "DOM.Iterable", "DOM.AsyncIterable"],
+    "lib": [
+      "ES2023",
+      "DOM",
+      "DOM.Iterable",
+      "DOM.AsyncIterable"
+    ],
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
     "strict": true,
@@ -12,7 +17,14 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "types": ["vite/client"]
+    "types": [
+      "vite/client"
+    ],
+    "allowJs": true,
+    "checkJs": false
   },
-  "include": ["src", "tests"]
+  "include": [
+    "src",
+    "tests"
+  ]
 }

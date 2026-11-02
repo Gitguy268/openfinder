@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { goBack, goForward, visit } from '../../src/finder/history'
+import { goBack, goForward, visit } from '../../src/library/history'
 
 test('back and forward walk the visited places', () => {
   let h = visit(visit({ back: [], current: 'a', forward: [] }, 'b'), 'c')

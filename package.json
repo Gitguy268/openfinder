@@ -1,7 +1,7 @@
 {
   "name": "openfinder",
   "version": "0.1.0",
-  "description": "A local-first file manager for Chromium browsers with a Finder-style Liquid Glass interface.",
+  "description": "A local-first file library in the browser, in Xiao's design. Inside Xiao it is the Library.",
   "license": "GPL-3.0-or-later",
   "author": "Lucas Van De Weerd",
   "type": "module",
@@ -17,14 +17,18 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
+    "build:xiao": "tsc --noEmit && vite build --mode xiao",
     "start": "node bin/openfinder.mjs",
     "test": "vitest run",
     "e2e": "playwright test",
+    "tokens": "node scripts/xiao-tokens.mjs",
+    "contract": "node scripts/sync-contract.mjs",
+    "contract:check": "node scripts/sync-contract.mjs --check",
     "licenses": "node scripts/notices.mjs",
     "licenses:write": "node scripts/notices.mjs --write"
   },
   "dependencies": {
-    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource-variable/bricolage-grotesque": "5.3.0",
     "@preact/signals": "2.11.3",
     "lucide": "1.56.0",
     "preact": "11.0.1"

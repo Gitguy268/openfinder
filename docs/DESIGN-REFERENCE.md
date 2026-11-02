@@ -1,5 +1,7 @@
 # Design reference: Finder on macOS 27
 
+> **Superseded on 2026-10-21.** OpenFinder now follows Xiao's design (see [DECISIONS.md](DECISIONS.md)): solid paper surfaces instead of Liquid Glass, Xiao's tokens and fonts, one sidebar. This page is kept as the research behind milestone 1. Its claims about macOS 27 are not requirements, and the ones marked as unconfirmed were never checked.
+
 Researched on 2026-10-13. Each statement is marked by how well it is supported. Nothing here is copied artwork; it describes layout and behavior.
 
 ## Confirmed by Apple
