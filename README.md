@@ -21,6 +21,10 @@
 
 OpenFinder is an independent project and is not affiliated with or endorsed by Apple.
 
+<!-- live-links -->
+**Live:** [gitguy268.github.io/openfinder](https://gitguy268.github.io/openfinder/) · [openfinder-six.vercel.app](https://openfinder-six.vercel.app)
+<!-- /live-links -->
+
 <!-- run-steps:start -->
 ## Run it locally, step by step
 
