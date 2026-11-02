@@ -21,6 +21,36 @@
 
 OpenFinder is an independent project and is not affiliated with or endorsed by Apple.
 
+<!-- run-steps:start -->
+## Run it locally, step by step
+
+1. **Install [Node.js](https://nodejs.org) 22** or newer.
+
+2. **Get the code:**
+
+   ```sh
+   git clone https://github.com/Gitguy268/openfinder.git
+   cd openfinder
+   ```
+
+3. **Install and build:**
+
+   ```sh
+   npm install
+   npm run build
+   ```
+
+4. **Start it:**
+
+   ```sh
+   npm start
+   ```
+
+   On a Mac you can double-click `start.command` instead of these two steps.
+
+5. **Open <http://localhost:4627/>** in Chrome, Edge, Brave, Opera or Arc. Press `Ctrl+C` to stop.
+<!-- run-steps:end -->
+
 ## Quick start
 
 ```sh
