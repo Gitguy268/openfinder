@@ -25,6 +25,14 @@ OpenFinder is an independent project and is not affiliated with or endorsed by A
 **Live:** [gitguy268.github.io/openfinder](https://gitguy268.github.io/openfinder/) · [openfinder-six.vercel.app](https://openfinder-six.vercel.app)
 <!-- /live-links -->
 
+## Install with Homebrew
+
+```sh
+brew trust gitguy268/tap
+brew install gitguy268/tap/openfinder
+openfinder --open    # http://localhost:4627/
+```
+
 <!-- run-steps:start -->
 ## Run it locally, step by step
 
